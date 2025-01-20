@@ -51,6 +51,12 @@ based on whatever scenario this is, here is the strategy to pick:
 
 st.title("Market Anomaly Predictor")
 
+# Isolation Forest: 
+# This is a machine learning model that is used to detect anomalies in the data.
+# Suggestion: It looks like you are training the model each time you run the code.
+# This is not a good idea, as the model will not be able to detect anomalies if it is trained on the same data.
+# Instead, you should train the model on a large dataset and then use it to detect anomalies.
+
 model_recent_data = IsolationForest(n_estimators=100,
                                     contamination=0.05,
                                     random_state=42)
